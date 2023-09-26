@@ -1,0 +1,8 @@
+{
+  "expires_in": 3600,
+  "token_type": "Bearer",
+  "oracle_tk_context": "user_assertion",
+  "refresh_token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInBhc3N3b3JkIjoiZGV2IiwiaWF0IjoxNjk1NzIyMDY3LCJleHAiOjE2OTU3MzI4Njd9.BMHn2DyIk6vfScKpGlMu55plGhFqhmkHbRoM52XoMlo",
+  "access_token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInBhc3N3b3JkIjoiZGV2IiwiaWF0IjoxNjk1NzIyMDY3LCJleHAiOjE2OTU3MzI4Njd9.BMHn2DyIk6vfScKpGlMu55plGhFqhmkHbRoM52XoMlo",
+  "oracle_grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer"
+}
