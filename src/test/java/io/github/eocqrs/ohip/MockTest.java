@@ -26,34 +26,32 @@ package io.github.eocqrs.ohip;
 
 import io.github.eocqrs.eokson.Jocument;
 import io.github.eocqrs.eokson.JsonOf;
+import org.cactoos.io.ResourceOf;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.core.IsEqual;
+import org.junit.jupiter.api.Test;
 
 /**
- * Refresh Token.
+ * Test suite for {@link io.github.eocqrs.ohip.Token.Mock}.
  *
  * @since 0.0.0
  */
-public final class Refresh implements Token {
+@SuppressWarnings("JTCOP.RuleAllTestsHaveProductionClass")
+final class MockTest {
 
-  /**
-   * Origin Token.
-   */
-  private final Token origin;
-
-  /**
-   * Ctor.
-   *
-   * @param orgn Origin Token
-   */
-  public Refresh(final Token orgn) {
-    this.origin = orgn;
-  }
-
-  @Override
-  public String asString() throws Exception {
-    return new Jocument(
-      new JsonOf(
-        this.origin.asString()
+  @Test
+  void readsTokenInRightFormat() throws Exception {
+    MatcherAssert.assertThat(
+      "Token in right format",
+      new Token.Mock().asString(),
+      new IsEqual<>(
+        new Jocument(
+          new JsonOf(
+            new ResourceOf("mock-token.json")
+              .stream()
+          )
+        ).pretty()
       )
-    ).leaf("/refresh_token");
+    );
   }
 }

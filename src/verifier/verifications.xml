@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Private License
+
+Copyright (c) 2023 Mahon Media LLC.
+-->
+<verifications xmlns="http://maven.apache.org/verifications/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/verifications/1.0.0 http://maven.apache.org/xsd/verifications-1.0.0.xsd">
+  <files>
+    <file>
+      <exists>true</exists>
+      <location>LICENSE.txt</location>
+      <contains>2023</contains>
+    </file>
+  </files>
+</verifications>
