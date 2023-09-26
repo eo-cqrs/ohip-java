@@ -36,10 +36,8 @@ import org.cactoos.Text;
 public interface Token extends Text {
 
   /*
-   * @todo #1:45min\DEV We need to implement
-   *   dynamic JWT token generation;
-   *   maybe, it can bre based on provided
-   *   username and password
+   * @todo #1:45min/DEV Implement dynamic JWT token generation
+   *   Can be based on provided username and password
    * */
 
   /**
