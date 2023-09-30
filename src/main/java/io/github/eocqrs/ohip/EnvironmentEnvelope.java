@@ -1,5 +1,6 @@
 package io.github.eocqrs.ohip;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -68,7 +69,7 @@ public abstract class EnvironmentEnvelope implements Environment {
   }
 
   @Override
-  public final Map<String, String> value() throws Exception {
+  public final Map<String, String> value() {
     final Map<String, String> vars = new HashMap<>(6);
     vars.put("hostname", this.hostname);
     vars.put("app", this.app);
@@ -76,6 +77,6 @@ public abstract class EnvironmentEnvelope implements Environment {
     vars.put("username", this.username);
     vars.put("password", this.password);
     vars.put("hotel", this.hotel);
-    return vars;
+    return Collections.unmodifiableMap(vars);
   }
 }
